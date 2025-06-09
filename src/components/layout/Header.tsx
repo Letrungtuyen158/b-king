@@ -51,50 +51,48 @@ export default function Header({ className = "" }: HeaderProps) {
       className={`fixed top-0 left-0 right-0 bg-white shadow-md z-50 ${className}`}
     >
       {/* Sub Header */}
-      <div className='lg:px-24 px-8 md:px-12 py-2 text-[10px] text-stone-950 w-full bg-stone-50 flex justify-between items-center'>
-        <div className='flex items-center divide-x divide-neutral-400 *:px-5'>
-          <div className='flex items-center gap-1.5'>
+      <div className="lg:px-24 px-8 md:px-12 py-2 text-[10px] text-stone-950 w-full bg-stone-50 flex justify-between items-center">
+        <div className="flex items-center divide-x divide-neutral-400 *:px-5">
+          <div className="flex items-center gap-1.5">
             <IconLocation />
-            <div className=''>
-              72 Hang Trong St., Hoan Kiem Dist., Hanoi, Vietnam 2000
-            </div>
+            <div className="">85 Hoang Quoc Viet Str, Hanoi , Vietnam</div>
           </div>
-          <div className='flex items-center gap-1.5'>
+          <div className="flex items-center gap-1.5">
             <IconClock />
-            <div className=''>Hotline: +84-946 505 505</div>
+            <div className="">Hotline: +84-946 505 505</div>
           </div>
         </div>
-        <div className='md:flex items-center hidden gap-2.5'>
-          <div className='inline-flex px-5 py-2 rounded-full items-center border border-zinc-200 gap-1'>
-            <div className=''>Language</div>
+        <div className="md:flex items-center hidden gap-2.5">
+          <div className="inline-flex px-5 py-2 rounded-full items-center border border-zinc-200 gap-1">
+            <div className="">Language</div>
             <IconChevron />
           </div>
-          <div className='flex items-center divide-x divide-neutral-400 *:px-3'>
-            <div className='#'>FAQ</div>
-            <div className='#'>Support</div>
-            <div className='#'>Sign in/ Register</div>
+          <div className="flex items-center divide-x divide-neutral-400 *:px-3">
+            <div className="#">FAQ</div>
+            <div className="#">Support</div>
+            <div className="#">Sign in/ Register</div>
           </div>
         </div>
       </div>
 
       {/* Main Header */}
-      <div className='px-4 space-x-4 md:px-8 py-4 md:py-6'>
-        <div className='flex items-center justify-between'>
+      <div className="px-4 space-x-4 md:px-8 py-4 md:py-6">
+        <div className="flex items-center justify-between">
           {/* Logo */}
-          <Link href='/' className='flex items-center space-x-2'>
-            <div className='w-12 h-12 aspect-square bg-blue-600 rounded-full flex items-center justify-center'>
-              <Ship className='w-6 h-6 text-white' />
+          <Link href="/" className="flex items-center space-x-2">
+            <div className="w-12 h-12 aspect-square bg-blue-600 rounded-full flex items-center justify-center">
+              <Ship className="w-6 h-6 text-white" />
             </div>
             <div>
-              <h1 className='text-lg md:text-xl font-bold text-gray-900'>
+              <h1 className="text-lg md:text-xl font-bold text-gray-900">
                 Halong Bay Tours
               </h1>
-              <p className='text-xs text-gray-500'>Asia Pacific Travel</p>
+              <p className="text-xs text-gray-500">Asia Pacific Travel</p>
             </div>
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className='hidden lg:flex items-center'>
+          <nav className="hidden lg:flex items-center">
             {navigationItems.map((item) => (
               <button
                 key={item.name}
@@ -109,20 +107,20 @@ export default function Header({ className = "" }: HeaderProps) {
           </nav>
 
           {/* CTA Button & Mobile Menu */}
-          <div className='flex items-center gap-2 md:gap-4'>
+          <div className="flex items-center gap-2 md:gap-4">
             <Link href={"#booking-tour"}>
-              <button className='bg-blue-800 text-white px-3 md:px-5 py-2 text-xs capitalize rounded hover:bg-blue-700 transition-colors'>
+              <button className="bg-blue-800 text-white px-3 md:px-5 py-2 text-xs capitalize rounded hover:bg-blue-700 transition-colors">
                 Book A Tour
               </button>
             </Link>
             <button
-              className='lg:hidden'
+              className="lg:hidden"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
             >
               {isMenuOpen ? (
-                <X className='w-6 h-6' />
+                <X className="w-6 h-6" />
               ) : (
-                <Menu className='w-6 h-6' />
+                <Menu className="w-6 h-6" />
               )}
             </button>
           </div>
@@ -134,9 +132,9 @@ export default function Header({ className = "" }: HeaderProps) {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
-            className='lg:hidden mt-4 py-4 border-t border-gray-100'
+            className="lg:hidden mt-4 py-4 border-t border-gray-100"
           >
-            <nav className='flex flex-col space-y-4'>
+            <nav className="flex flex-col space-y-4">
               {navigationItems.map((item) => (
                 <button
                   key={item.name}
@@ -155,3 +153,4 @@ export default function Header({ className = "" }: HeaderProps) {
     </motion.header>
   );
 }
+

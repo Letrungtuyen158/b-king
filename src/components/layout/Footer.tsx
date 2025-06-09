@@ -103,15 +103,15 @@ export default function Footer({ className = "" }: FooterProps) {
                   <div className="flex items-start space-x-3">
                     <MapPin className="w-4 h-4 mt-1 text-blue-400 flex-shrink-0" />
                     <span className="text-gray-300">
-                      5-87 Hoang Quoc Viet Street,
+                      85-87 Hoang Quoc Viet Street,
                       <br />
-                      Cau Giay District, Hanoi, Vietnam
+                      Hanoi, Vietnam
                     </span>
                   </div>
                 </div>
               </div>
 
-              <div>
+              {/* <div>
                 <p className="font-medium mb-2">Ho Chi Minh City Office</p>
                 <div className="space-y-2">
                   <div className="flex items-start space-x-3">
@@ -129,7 +129,7 @@ export default function Footer({ className = "" }: FooterProps) {
                     </span>
                   </div>
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
 
@@ -193,3 +193,4 @@ export default function Footer({ className = "" }: FooterProps) {
     </footer>
   );
 }
+
