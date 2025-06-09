@@ -4,7 +4,6 @@ import { useState } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import Link from "next/link";
-import IconChevron from "@/components/icon/IconChevron";
 import IconClock from "@/components/icon/IconClock";
 import IconLocation from "@/components/icon/IconLocation";
 import AuthModal from "@/components/auth/AuthModal";
@@ -66,10 +65,10 @@ export default function Header({ className = "" }: HeaderProps) {
             </div>
           </div>
           <div className="md:flex items-center hidden gap-2.5">
-            <div className="inline-flex px-5 py-2 rounded-full items-center border border-zinc-200 gap-1">
+            {/* <div className="inline-flex px-5 py-2 rounded-full items-center border border-zinc-200 gap-1">
               <div className="">Language</div>
               <IconChevron />
-            </div>
+            </div> */}
             <div className="flex items-center divide-x divide-neutral-400 *:px-3">
               <div className="#">FAQ</div>
               <div className="#">Support</div>
@@ -84,7 +83,7 @@ export default function Header({ className = "" }: HeaderProps) {
         </div>
 
         {/* Main Header */}
-        <div className="px-4 space-x-4 md:px-8 py-4 md:py-0">
+        <div className="px-8 space-x-4 lg:px-24 py-4 md:py-0">
           <div className="flex items-center justify-between">
             {/* Logo */}
             <Link href="/" className="flex items-center space-x-2">
