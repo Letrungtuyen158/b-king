@@ -53,57 +53,57 @@ export default function TravelBlog() {
   ];
 
   return (
-    <section className='py-20 bg-white'>
-      <div className='container mx-auto px-4'>
+    <section className="py-20 bg-white">
+      <div className="container mx-auto px-4">
         <motion.div
-          initial='hidden'
-          whileInView='visible'
+          initial="hidden"
+          whileInView="visible"
           viewport={{ once: true }}
           variants={fadeInUp}
-          className='text-center mb-16'
+          className="text-center mb-16"
         >
-          <h2 className='text-4xl md:text-5xl font-bold text-gray-900 mb-6'>
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
             Travel Blog & Tips
           </h2>
-          <p className='text-lg text-gray-600 max-w-4xl mx-auto'>
+          <p className="text-lg text-gray-600 max-w-4xl mx-auto">
             Get insider tips and stories from our travel experts to make your
             Halong Bay experience unforgettable
           </p>
         </motion.div>
 
-        <div className='grid lg:grid-cols-3 gap-8'>
+        <div className="grid lg:grid-cols-3 gap-8">
           {/* Featured Post */}
           <motion.div
-            initial='hidden'
-            whileInView='visible'
+            initial="hidden"
+            whileInView="visible"
             viewport={{ once: true }}
             variants={fadeInUp}
-            className='lg:col-span-2'
+            className="lg:col-span-2"
           >
-            <div className='bg-white rounded-2xl shadow-lg overflow-hidden group hover:shadow-xl transition-all duration-300'>
-              <div className='aspect-[16/9] overflow-hidden'>
+            <div className="bg-white rounded-2xl shadow-lg overflow-hidden group hover:shadow-xl transition-all duration-300">
+              <div className="aspect-[16/9] overflow-hidden">
                 <img
-                  src='/images/home/image_discover.png'
-                  alt='Featured Post'
-                  className='w-full h-full object-cover group-hover:scale-110 transition-transform duration-500'
+                  src="/images/home/image_discover.png"
+                  alt="Featured Post"
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                 />
               </div>
-              <div className='p-8'>
-                <div className='flex items-center space-x-4 text-sm text-gray-500 mb-4'>
-                  <div className='flex items-center space-x-2'>
-                    <User className='w-4 h-4' />
+              <div className="p-8">
+                <div className="flex items-center space-x-4 text-sm text-gray-500 mb-4">
+                  <div className="flex items-center space-x-2">
+                    <User className="w-4 h-4" />
                     <span>Travel Expert</span>
                   </div>
-                  <div className='flex items-center space-x-2'>
-                    <Calendar className='w-4 h-4' />
+                  <div className="flex items-center space-x-2">
+                    <Calendar className="w-4 h-4" />
                     <span>Jan 20, 2025</span>
                   </div>
                 </div>
-                <h3 className='text-2xl font-bold text-gray-900 mb-4'>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">
                   The Ultimate Guide to Halong Bay: Everything You Need to Know
                   Before You Go
                 </h3>
-                <p className='text-gray-600 mb-6 leading-relaxed'>
+                <p className="text-gray-600 mb-6 leading-relaxed">
                   Discover the secrets of one of Vietnam&apos;s most iconic
                   destinations. From the best cruise options to hidden gems that
                   most tourists never see, this comprehensive guide will help
@@ -111,9 +111,9 @@ export default function TravelBlog() {
                   geological wonders, local culture, and insider tips that will
                   make your journey truly unforgettable.
                 </p>
-                <button className='text-blue-600 hover:text-blue-700 font-medium flex items-center space-x-2 group'>
+                <button className="text-blue-600 hover:text-blue-700 font-medium flex items-center space-x-2 group">
                   <span>Read Full Article</span>
-                  <ChevronRight className='w-4 h-4 group-hover:translate-x-1 transition-transform' />
+                  <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                 </button>
               </div>
             </div>
@@ -121,36 +121,36 @@ export default function TravelBlog() {
 
           {/* Sidebar with Recent Posts */}
           <motion.div
-            initial='hidden'
-            whileInView='visible'
+            initial="hidden"
+            whileInView="visible"
             viewport={{ once: true }}
             variants={stagger}
-            className='space-y-6'
+            className="space-y-6"
           >
-            <div className='bg-gray-50 rounded-2xl p-6'>
-              <h4 className='text-xl font-bold text-gray-900 mb-6'>
+            <div className="bg-gray-50 rounded-2xl p-6">
+              <h4 className="text-xl font-bold text-gray-900 mb-6">
                 Recent Posts
               </h4>
-              <div className='space-y-6'>
+              <div className="space-y-6">
                 {blogPosts.map((post) => (
                   <motion.div
                     key={post.id}
                     variants={fadeInUp}
-                    className='group cursor-pointer'
+                    className="group cursor-pointer"
                   >
-                    <div className='flex space-x-4'>
-                      <div className='flex-shrink-0 w-20 h-20 rounded-lg overflow-hidden'>
+                    <div className="flex space-x-4">
+                      <div className="flex-shrink-0 w-20 h-20 rounded-lg overflow-hidden">
                         <img
                           src={post.image}
                           alt={post.title}
-                          className='w-full h-full object-cover group-hover:scale-110 transition-transform duration-300'
+                          className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
                         />
                       </div>
-                      <div className='flex-1'>
-                        <h5 className='font-medium text-gray-900 mb-2 line-clamp-2 group-hover:text-blue-600 transition-colors'>
+                      <div className="flex-1">
+                        <h5 className="font-medium text-gray-900 mb-2 line-clamp-2 group-hover:text-blue-600 transition-colors">
                           {post.title}
                         </h5>
-                        <div className='flex items-center space-x-2 text-xs text-gray-500'>
+                        <div className="flex items-center space-x-2 text-xs text-gray-500">
                           <span>{post.author}</span>
                           <span>•</span>
                           <span>{post.date}</span>
@@ -163,7 +163,7 @@ export default function TravelBlog() {
             </div>
 
             {/* Newsletter Signup */}
-            <motion.div
+            {/* <motion.div
               variants={fadeInUp}
               className='bg-blue-600 rounded-2xl p-6 text-white'
             >
@@ -182,17 +182,17 @@ export default function TravelBlog() {
                   Subscribe Now
                 </button>
               </div>
-            </motion.div>
+            </motion.div> */}
 
             {/* Popular Tags */}
             <motion.div
               variants={fadeInUp}
-              className='bg-white rounded-2xl p-6'
+              className="bg-white rounded-2xl p-6"
             >
-              <h4 className='text-xl font-bold text-gray-900 mb-4'>
+              <h4 className="text-xl font-bold text-gray-900 mb-4">
                 Popular Tags
               </h4>
-              <div className='flex flex-wrap gap-2'>
+              <div className="flex flex-wrap gap-2">
                 {[
                   "Halong Bay",
                   "Cruise",
@@ -205,7 +205,7 @@ export default function TravelBlog() {
                 ].map((tag, index) => (
                   <span
                     key={index}
-                    className='px-3 py-1 bg-gray-100 text-gray-700 text-sm rounded-full hover:bg-blue-100 hover:text-blue-600 cursor-pointer transition-colors'
+                    className="px-3 py-1 bg-gray-100 text-gray-700 text-sm rounded-full hover:bg-blue-100 hover:text-blue-600 cursor-pointer transition-colors"
                   >
                     {tag}
                   </span>
@@ -218,3 +218,4 @@ export default function TravelBlog() {
     </section>
   );
 }
+

@@ -87,37 +87,37 @@ export default function CruiseItineraries() {
   ];
 
   return (
-    <section className='py-20 bg-white' id='customize'>
-      <div className='container mx-auto px-4'>
+    <section className="py-8 bg-white" id="customize">
+      <div className="container mx-auto px-4">
         <motion.div
-          initial='hidden'
-          whileInView='visible'
+          initial="hidden"
+          whileInView="visible"
           viewport={{ once: true }}
           variants={fadeInUp}
-          className='text-center mb-16'
+          className="text-center mb-16"
         >
-          <h2 className='text-4xl md:text-5xl font-bold text-gray-900 mb-6'>
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
             Cruise Itineraries
           </h2>
-          <p className='text-lg text-gray-600 max-w-4xl mx-auto'>
+          {/* <p className="text-lg text-gray-600 max-w-4xl mx-auto">
             Explore our carefully crafted itineraries for Halong Bay and Cat Ba
             Island, designed to showcase the best of Vietnam&apos;s natural
             wonders
-          </p>
+          </p> */}
         </motion.div>
 
         {/* Halong Bay Section */}
         <motion.div
-          initial='hidden'
-          whileInView='visible'
+          initial="hidden"
+          whileInView="visible"
           viewport={{ once: true }}
           variants={fadeInUp}
-          className='mb-16'
+          className="mb-16"
         >
-          <h3 className='text-3xl font-bold text-gray-900 mb-8'>
+          {/* <h3 className="text-3xl font-bold text-gray-900 mb-8">
             Halong Bay Cruises
-          </h3>
-          <div className='grid sm:grid-cols-2 lg:grid-cols-4 gap-6'>
+          </h3> */}
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {halongBayItineraries.map((cruise, index) => (
               <motion.div
                 key={cruise.id}
@@ -134,36 +134,36 @@ export default function CruiseItineraries() {
                   <img
                     src={cruise.image}
                     alt={cruise.title}
-                    className='w-full h-full object-cover group-hover:scale-110 transition-transform duration-500'
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                   />
                 </div>
-                <div className='p-6'>
-                  <div className='flex items-center justify-between mb-3'>
-                    <h4 className='font-bold text-gray-900 text-lg'>
+                <div className="p-6">
+                  <div className="flex items-center justify-between mb-3">
+                    <h4 className="font-bold text-gray-900 text-lg">
                       {cruise.title}
                     </h4>
-                    <div className='flex items-center space-x-1'>
-                      <Star className='w-4 h-4 text-yellow-400 fill-current' />
-                      <span className='text-sm font-medium'>
+                    <div className="flex items-center space-x-1">
+                      <Star className="w-4 h-4 text-yellow-400 fill-current" />
+                      <span className="text-sm font-medium">
                         {cruise.rating}
                       </span>
                     </div>
                   </div>
-                  <div className='flex items-center space-x-4 text-sm text-gray-600 mb-4'>
-                    <div className='flex items-center space-x-1'>
-                      <Calendar className='w-4 h-4' />
+                  <div className="flex items-center space-x-4 text-sm text-gray-600 mb-4">
+                    <div className="flex items-center space-x-1">
+                      <Calendar className="w-4 h-4" />
                       <span>{cruise.duration}</span>
                     </div>
-                    <div className='flex items-center space-x-1'>
-                      <Users className='w-4 h-4' />
+                    <div className="flex items-center space-x-1">
+                      <Users className="w-4 h-4" />
                       <span>{cruise.reviews} reviews</span>
                     </div>
                   </div>
-                  <div className='flex items-center justify-between'>
-                    <span className='text-2xl font-bold text-blue-600'>
+                  <div className="flex items-center justify-between">
+                    <span className="text-2xl font-bold text-blue-600">
                       {cruise.price}
                     </span>
-                    <button className='bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors text-sm'>
+                    <button className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors text-sm">
                       View Details
                     </button>
                   </div>
@@ -174,7 +174,7 @@ export default function CruiseItineraries() {
         </motion.div>
 
         {/* Cat Ba Island Section */}
-        <motion.div
+        {/* <motion.div
           initial='hidden'
           whileInView='visible'
           viewport={{ once: true }}
@@ -236,33 +236,35 @@ export default function CruiseItineraries() {
               </motion.div>
             ))}
           </div>
-        </motion.div>
+        </motion.div> */}
 
         {/* CTA Section */}
-        <motion.div
-          initial='hidden'
-          whileInView='visible'
+
+        {/* <motion.div
+          initial="hidden"
+          whileInView="visible"
           viewport={{ once: true }}
           variants={fadeInUp}
-          className='text-center bg-blue-50 rounded-2xl p-12'
+          className="text-center bg-blue-50 rounded-2xl p-12"
         >
-          <h3 className='text-3xl font-bold text-gray-900 mb-4'>
+          <h3 className="text-3xl font-bold text-gray-900 mb-4">
             Can&apos;t Find What You&apos;re Looking For?
           </h3>
-          <p className='text-lg text-gray-600 mb-8 max-w-2xl mx-auto'>
+          <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
             Our expert travel advisors can create a custom itinerary tailored to
             your preferences, budget, and schedule.
           </p>
-          <div className='flex flex-col sm:flex-row gap-4 justify-center'>
-            <button className='bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors font-medium'>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors font-medium">
               Customize Your Trip
             </button>
-            <button className='border border-blue-600 text-blue-600 px-8 py-3 rounded-lg hover:bg-blue-600 hover:text-white transition-colors font-medium'>
+            <button className="border border-blue-600 text-blue-600 px-8 py-3 rounded-lg hover:bg-blue-600 hover:text-white transition-colors font-medium">
               Speak to an Expert
             </button>
           </div>
-        </motion.div>
+        </motion.div> */}
       </div>
     </section>
   );
 }
+
