@@ -84,32 +84,22 @@ export default function Header({ className = "" }: HeaderProps) {
         </div>
 
         {/* Main Header */}
-        <div className="px-4 space-x-4 md:px-8 py-4 md:py-6">
+        <div className="px-4 space-x-4 md:px-8 py-4 md:py-0">
           <div className="flex items-center justify-between">
             {/* Logo */}
             <Link href="/" className="flex items-center space-x-2">
-              <div className="w-12 h-12 aspect-square bg-blue-600 rounded-full flex items-center justify-center">
-                <img
-                  src="/images/logo/logo.webp"
-                  alt="logo"
-                  className="w-12 h-12"
-                />
-              </div>
-              <div>
-                <h1 className="text-lg md:text-xl font-bold text-gray-900">
-                  Halong Bay Tours
-                </h1>
-                <p className="text-xs text-gray-500">Asia Pacific Travel</p>
+              <div className="w-24 h-24 aspect-square rounded-full flex items-center justify-center">
+                <img src="/images/logo/logo.webp" alt="logo" />
               </div>
             </Link>
 
             {/* Desktop Navigation */}
-            <nav className="hidden lg:flex items-center">
+            <nav className="hidden lg:w-[70%] lg:flex items-center">
               {navigationItems.map((item) => (
                 <button
                   key={item.name}
                   onClick={() => scrollTo(item.href)}
-                  className={`text-neutral-600 hover:text-blue-800 transition-colors px-3 capitalize text-sm min-w-20 ${
+                  className={`text-neutral-600 w-full hover:text-blue-800 transition-colors px-3 capitalize text-sm min-w-20 ${
                     activeItem === item.href ? "!text-blue-800 font-bold" : ""
                   }`}
                 >

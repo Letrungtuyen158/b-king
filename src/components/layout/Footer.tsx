@@ -8,6 +8,7 @@ import {
   Instagram,
   Linkedin,
 } from "lucide-react";
+import Link from "next/link";
 
 interface FooterProps {
   className?: string;
@@ -23,9 +24,11 @@ export default function Footer({ className = "" }: FooterProps) {
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           {/* Company Info */}
           <div>
-            <h3 className="text-xl font-bold mb-4">
-              Halong Tours - Asia Pacific Travel
-            </h3>
+            <Link href="/" className="flex items-center space-x-2">
+              <div className="w-24 h-24 aspect-square rounded-full flex items-center justify-center">
+                <img src="/images/logo/logo.webp" alt="logo" />
+              </div>
+            </Link>
             <p className="text-gray-300 text-sm mb-6">
               Halongbaytours.com is a premium cruise and tour booking service
               offered by Blue Dragon Tours. Here on our website you can find
