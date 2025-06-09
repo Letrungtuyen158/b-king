@@ -100,7 +100,7 @@ export default function Footer({ className = "" }: FooterProps) {
                     <Phone className="w-4 h-4 mt-1 text-blue-400 flex-shrink-0" />
                     <div className="text-gray-300">
                       <div>+84 24 38364212</div>
-                      <div>+84 24 37588858</div>
+                      <div>+84 24 37568868</div>
                     </div>
                   </div>
                   <div className="flex items-start space-x-3">
@@ -109,6 +109,25 @@ export default function Footer({ className = "" }: FooterProps) {
                       85-87 Hoang Quoc Viet Street,
                       <br />
                       Hanoi, Vietnam
+                    </span>
+                  </div>
+                </div>
+              </div>
+
+              <div>
+                <p className="font-medium mb-2">Hochiminh City Office:</p>
+                <div className="space-y-2">
+                  <div className="flex items-start space-x-3">
+                    <Phone className="w-4 h-4 mt-1 text-blue-400 flex-shrink-0" />
+                    <div className="text-gray-300">
+                      <div>+84 28 38 3333 88</div>
+                    </div>
+                  </div>
+                  <div className="flex items-start space-x-3">
+                    <MapPin className="w-4 h-4 mt-1 text-blue-400 flex-shrink-0" />
+                    <span className="text-gray-300">
+                      Room 3A2, First floor, Toong Office, 126 Nguyen Thi Minh
+                      Khai Street, Distric 3, Hochiminh City
                     </span>
                   </div>
                 </div>

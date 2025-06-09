@@ -61,7 +61,7 @@ export default function Header({ className = "" }: HeaderProps) {
             </div>
             <div className="flex items-center gap-1.5">
               <IconClock />
-              <div className="">Hotline: +84-946 505 505</div>
+              <div className="">Hotline: +84 24 38364212 / +84 24 37568868</div>
             </div>
           </div>
           <div className="md:flex items-center hidden gap-2.5">
