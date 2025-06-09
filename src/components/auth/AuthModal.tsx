@@ -28,7 +28,7 @@ export default function AuthModal({ open, onClose }: AuthModalProps) {
             }`}
             onClick={() => setTab("login")}
           >
-            Đăng nhập
+            Sign In
           </button>
           <button
             className={`px-4 py-2 font-semibold rounded-r ${
@@ -38,7 +38,7 @@ export default function AuthModal({ open, onClose }: AuthModalProps) {
             }`}
             onClick={() => setTab("register")}
           >
-            Đăng ký
+            Register
           </button>
         </div>
         {tab === "login" ? (
@@ -50,22 +50,22 @@ export default function AuthModal({ open, onClose }: AuthModalProps) {
             />
             <input
               type="password"
-              placeholder="Mật khẩu"
+              placeholder="Password"
               className="w-full border rounded px-3 py-2 mb-3"
             />
             <button
               type="submit"
               className="w-full bg-blue-800 text-white py-2 rounded hover:bg-blue-700"
             >
-              Đăng nhập
+              Sign In
             </button>
             <div className="mt-4 text-center text-sm">
-              Chưa có tài khoản?{" "}
+              Don&apos;t have an account?{" "}
               <span
                 className="text-blue-700 underline cursor-pointer"
                 onClick={() => setTab("register")}
               >
-                Đăng ký
+                Register
               </span>
             </div>
           </form>
@@ -73,7 +73,7 @@ export default function AuthModal({ open, onClose }: AuthModalProps) {
           <form>
             <input
               type="text"
-              placeholder="Họ và tên"
+              placeholder="Full Name"
               className="w-full border rounded px-3 py-2 mb-3"
             />
             <input
@@ -83,22 +83,22 @@ export default function AuthModal({ open, onClose }: AuthModalProps) {
             />
             <input
               type="password"
-              placeholder="Mật khẩu"
+              placeholder="Password"
               className="w-full border rounded px-3 py-2 mb-3"
             />
             <button
               type="submit"
               className="w-full bg-blue-800 text-white py-2 rounded hover:bg-blue-700"
             >
-              Đăng ký
+              Register
             </button>
             <div className="mt-4 text-center text-sm">
-              Đã có tài khoản?{" "}
+              Already have an account?{" "}
               <span
                 className="text-blue-700 underline cursor-pointer"
                 onClick={() => setTab("login")}
               >
-                Đăng nhập
+                Sign In
               </span>
             </div>
           </form>
