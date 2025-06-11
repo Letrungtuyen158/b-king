@@ -1,3 +1,10 @@
 export { default as TravelBlog } from "./TravelBlog";
 export { default as AffordableCruises } from "./AffordableCruises";
 export { default as CruiseItineraries } from "./CruiseItineraries";
+export { default as AdvisorTeamSection } from "./AdvisorTeamSection";
+export { default as HeroSection } from "./HeroSection";
+export { default as ExperienceSection } from "./ExperienceSection";
+export { default as CruisePackagesSection } from "./CruisePackagesSection";
+export { default as DiscoverSliderSection } from "./DiscoverSliderSection";
+export { default as TestimonialsSection } from "./TestimonialsSection";
+export { default as NewsletterSection } from "./NewsletterSection";

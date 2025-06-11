@@ -21,7 +21,7 @@ export default function CruiseItineraries() {
     {
       id: 1,
       title: "Halong Bay Luxury Cruise",
-      duration: "2 Days 1 Night",
+      description: "2 Days 1 Night",
       price: "$299",
       image: "images/home/itineraries/image_itineraries1.png",
       rating: 4.8,
@@ -30,7 +30,7 @@ export default function CruiseItineraries() {
     {
       id: 2,
       title: "Royal Palace Cruise",
-      duration: "3 Days 2 Nights",
+      description: "3 Days 2 Nights",
       price: "$489",
       image: "images/home/itineraries/image_itineraries5.png",
       rating: 4.9,
@@ -39,7 +39,7 @@ export default function CruiseItineraries() {
     {
       id: 3,
       title: "Paradise Peak Cruise",
-      duration: "2 Days 1 Night",
+      description: "2 Days 1 Night",
       price: "$349",
       image: "images/home/itineraries/image_itineraries3.png",
       rating: 4.7,
@@ -48,7 +48,16 @@ export default function CruiseItineraries() {
     {
       id: 4,
       title: "Dragon Legend Cruise",
-      duration: "3 Days 2 Nights",
+      description: "3 Days 2 Nights",
+      price: "$599",
+      image: "images/home/itineraries/image_itineraries4.png",
+      rating: 4.8,
+      reviews: 267,
+    },
+    {
+      id: 5,
+      title: "Dragon Legend Cruise",
+      description: "3 Days 2 Nights",
       price: "$599",
       image: "images/home/itineraries/image_itineraries4.png",
       rating: 4.8,
@@ -87,16 +96,16 @@ export default function CruiseItineraries() {
   ];
 
   return (
-    <section className="py-8 bg-white" id="customize">
-      <div className="container mx-auto px-4">
+    <section className='py-8 bg-white' id='customize'>
+      <div className='container mx-auto px-4'>
         <motion.div
-          initial="hidden"
-          whileInView="visible"
+          initial='hidden'
+          whileInView='visible'
           viewport={{ once: true }}
           variants={fadeInUp}
-          className="text-center mb-16"
+          className='text-center mb-16'
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+          <h2 className='text-4xl md:text-5xl font-bold text-blue-800 mb-6'>
             Cruise Itineraries
           </h2>
           {/* <p className="text-lg text-gray-600 max-w-4xl mx-auto">
@@ -108,68 +117,89 @@ export default function CruiseItineraries() {
 
         {/* Halong Bay Section */}
         <motion.div
-          initial="hidden"
-          whileInView="visible"
+          initial='hidden'
+          whileInView='visible'
           viewport={{ once: true }}
           variants={fadeInUp}
-          className="mb-16"
+          className='mb-16'
         >
           {/* <h3 className="text-3xl font-bold text-gray-900 mb-8">
             Halong Bay Cruises
           </h3> */}
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {halongBayItineraries.map((cruise, index) => (
-              <motion.div
-                key={cruise.id}
-                variants={fadeInUp}
-                className={`bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 group ${
-                  index === 1 ? "sm:col-span-2 lg:col-span-2" : ""
-                }`}
-              >
-                <div
-                  className={`overflow-hidden ${
-                    index === 1 ? "aspect-[2/1]" : "aspect-[4/3]"
-                  }`}
+          <div className='grid grid-cols-3 grid-rows-6 gap-8'>
+            {halongBayItineraries.slice(0, 5).map((cruise, index) => {
+              const gridClasses = [
+                "row-span-3",
+                "col-span-2 row-span-3",
+                "row-span-3 row-start-4",
+                "row-span-3 row-start-4",
+                "row-span-3 row-start-4",
+              ];
+              const aspectClasses = [
+                "aspect-[1/1]",
+                "aspect-[2/1]",
+                "aspect-[1/1]",
+                "aspect-[1/1]",
+                "aspect-[1/1]",
+              ];
+
+              return (
+                <motion.div
+                  key={cruise.id}
+                  variants={fadeInUp}
+                  className={`bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all relative duration-300 group ${gridClasses[index]}`}
                 >
-                  <img
-                    src={cruise.image}
-                    alt={cruise.title}
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                  />
-                </div>
-                <div className="p-6">
-                  <div className="flex items-center justify-between mb-3">
-                    <h4 className="font-bold text-gray-900 text-lg">
-                      {cruise.title}
-                    </h4>
-                    <div className="flex items-center space-x-1">
-                      <Star className="w-4 h-4 text-yellow-400 fill-current" />
-                      <span className="text-sm font-medium">
-                        {cruise.rating}
+                  <div
+                    className={`${aspectClasses[index]} overflow-hidden h-full`}
+                  >
+                    <img
+                      src={cruise.image}
+                      alt={cruise.title}
+                      className={`w-full h-full object-cover group-hover:scale-110 transition-transform duration-500`}
+                    />
+                  </div>
+
+                  <div className='absolute inset-0 bg-gradient-to-t from-black/70 to-transparent' />
+                  <div className='absolute bottom-0 left-0 right-0 p-4 text-white'>
+                    <h3 className='text-2xl font-bold mb-2'>{cruise.title}</h3>
+                    <p className='text-sm font-medium mb-4'>
+                      {cruise.description}
+                    </p>
+                  </div>
+                  {/* <div className='p-6'>
+                    <div className='flex items-center justify-between mb-3'>
+                      <h4 className='font-bold text-gray-900 text-lg'>
+                        {cruise.title}
+                      </h4>
+                      <div className='flex items-center space-x-1'>
+                        <Star className='w-4 h-4 text-yellow-400 fill-current' />
+                        <span className='text-sm font-medium'>
+                          {cruise.rating}
+                        </span>
+                      </div>
+                    </div>
+                    <div className='flex items-center space-x-4 text-sm text-gray-600 mb-4'>
+                      <div className='flex items-center space-x-1'>
+                        <Calendar className='w-4 h-4' />
+                        <span>{cruise.duration}</span>
+                      </div>
+                      <div className='flex items-center space-x-1'>
+                        <Users className='w-4 h-4' />
+                        <span>{cruise.reviews} reviews</span>
+                      </div>
+                    </div>
+                    <div className='flex items-center justify-between'>
+                      <span className='text-2xl font-bold text-blue-600'>
+                        {cruise.price}
                       </span>
+                      <button className='bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors text-sm'>
+                        View Details
+                      </button>
                     </div>
-                  </div>
-                  <div className="flex items-center space-x-4 text-sm text-gray-600 mb-4">
-                    <div className="flex items-center space-x-1">
-                      <Calendar className="w-4 h-4" />
-                      <span>{cruise.duration}</span>
-                    </div>
-                    <div className="flex items-center space-x-1">
-                      <Users className="w-4 h-4" />
-                      <span>{cruise.reviews} reviews</span>
-                    </div>
-                  </div>
-                  <div className="flex items-center justify-between">
-                    <span className="text-2xl font-bold text-blue-600">
-                      {cruise.price}
-                    </span>
-                    <button className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors text-sm">
-                      View Details
-                    </button>
-                  </div>
-                </div>
-              </motion.div>
-            ))}
+                  </div> */}
+                </motion.div>
+              );
+            })}
           </div>
         </motion.div>
 
@@ -267,4 +297,3 @@ export default function CruiseItineraries() {
     </section>
   );
 }
-
