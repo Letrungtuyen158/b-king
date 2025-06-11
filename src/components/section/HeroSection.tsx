@@ -22,11 +22,11 @@ export default function HeroSection() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
         >
-          <h1 className='text-5xl md:text-6xl script-font mb-4 leading-tight'>
+          <h1 className='text-5xl lg:text-6xl script-font mb-4 leading-tight'>
             Unforgettable{" "}
             <span className='text-yellow-300'>Halong Bay Cruises</span>
           </h1>
-          <p className='text-xl md:text-5xl mb-12 font-bold'>
+          <p className='text-3xl lg:text-5xl mb-12 font-bold'>
             with Asia Pacific Travel - Since 2002
           </p>
         </motion.div>
@@ -36,7 +36,7 @@ export default function HeroSection() {
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.3 }}
-          className='px-6 py-4 bg-white/30 rounded-2xl flex backdrop-blur-lg mx-auto'
+          className='lg:px-6 lg:py-4 py-2 px-3 bg-white/30 rounded-2xl flex backdrop-blur-lg mx-auto'
         >
           <div className='flex flex-col w-full md:flex-row *:px-3 md:divide-x md:divide-white/70'>
             <div className='w-full relative'>
@@ -57,7 +57,7 @@ export default function HeroSection() {
                   viewBox='0 0 24 24'
                   fill='none'
                   xmlns='http://www.w3.org/2000/svg'
-                  className='absolute left-6 top-1/2 -translate-y-1/2 text-white/70 size-6'
+                  className='absolute md:left-8 left-3 top-1/2 -translate-y-1/2 text-white/70 size-6'
                 >
                   <g>
                     <path
@@ -67,7 +67,7 @@ export default function HeroSection() {
                   </g>
                 </svg>
 
-                <select className='w-full pl-10 pr-4 py-3.5 rounded-lg text-white/70 selection:text-white focus:outline-none bg-transparent appearance-none'>
+                <select className='w-full pl-4 md:pl-10 pr-4 py-3.5 rounded-lg text-white/70 selection:text-white focus:outline-none bg-transparent appearance-none'>
                   <option>Cruise category</option>
                   <option>Luxury Cruise</option>
                   <option>Budget Cruise</option>
@@ -77,7 +77,7 @@ export default function HeroSection() {
             </div>
             <button
               data-state='Default'
-              className='min-w-40 px-6 py-3.5 bg-white rounded-[32px] shadow-[0px_5px_12px_0px_rgba(130,130,130,0.10)] outline outline-1 outline-offset-[-1px] flex justify-center items-center gap-3 overflow-hidden'
+              className='min-w-40 px-6 py-2 max-md:mt-2 md:py-3.5 bg-white rounded-[32px] shadow-[0px_5px_12px_0px_rgba(130,130,130,0.10)] outline outline-1 outline-offset-[-1px] flex justify-center items-center gap-3 overflow-hidden'
             >
               <div className="justify-start text-blue-700 text-lg font-bold font-['Be_Vietnam_Pro']">
                 Search

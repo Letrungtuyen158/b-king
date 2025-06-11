@@ -126,21 +126,21 @@ export default function CruiseItineraries() {
           {/* <h3 className="text-3xl font-bold text-gray-900 mb-8">
             Halong Bay Cruises
           </h3> */}
-          <div className='grid grid-cols-3 grid-rows-6 gap-8'>
+          <div className='grid md:grid-cols-3 grid-cols-1 md:grid-rows-6 gap-8'>
             {halongBayItineraries.slice(0, 5).map((cruise, index) => {
               const gridClasses = [
-                "row-span-3",
-                "col-span-2 row-span-3",
-                "row-span-3 row-start-4",
-                "row-span-3 row-start-4",
-                "row-span-3 row-start-4",
+                "md:row-span-3",
+                "md:col-span-2 md:row-span-3",
+                "md:row-span-3 md:row-start-4",
+                "md:row-span-3 md:row-start-4",
+                "md:row-span-3 md:row-start-4",
               ];
               const aspectClasses = [
-                "aspect-[1/1]",
-                "aspect-[2/1]",
-                "aspect-[1/1]",
-                "aspect-[1/1]",
-                "aspect-[1/1]",
+                "aspect-square",
+                "aspect-square md:aspect-[2/1]",
+                "aspect-square",
+                "aspect-square",
+                "aspect-square",
               ];
 
               return (

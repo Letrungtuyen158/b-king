@@ -24,7 +24,7 @@ export default function CruisePackagesSection() {
   return (
     <section id='cruise-packages' className='py-20'>
       <div className='container mx-auto px-4'>
-        <div className='flex justify-between items-center mb-2.5'>
+        <div className='flex flex-col md:flex-row md:justify-between md:items-center mb-2.5 space-y-2'>
           <motion.h2
             initial='hidden'
             whileInView='visible'
@@ -39,10 +39,10 @@ export default function CruisePackagesSection() {
             whileInView='visible'
             viewport={{ once: true }}
             variants={fadeInUp}
-            className='text-stone-950 hover:text-blue-700 font-medium text-lg flex items-center gap-1 leading-relaxed'
+            className='text-stone-950 underline underline-offset-2 max-md:ml-auto hover:text-blue-700 font-medium text-base md:text-lg flex items-center gap-1 leading-relaxed'
           >
             <span>View All</span>
-            <ArrowRight className='size-6' />
+            <ArrowRight className='md:size-6 size-4' />
           </motion.button>
         </div>
 

@@ -103,16 +103,16 @@ export default function TestimonialsSection({}: TestimonialsSectionProps) {
           whileInView='visible'
           viewport={{ once: true }}
           variants={stagger}
-          className='grid md:grid-cols-3 md:grid-rows-9 gap-6'
+          className='grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 lg:grid-rows-9 gap-6'
         >
           {testimonials.map((testimonial, index) => {
             const gridClasses = [
-              "row-span-4 col-start-1 row-start-2",
-              "row-span-4 col-start-1 row-start-6",
-              "row-span-4 col-start-2 row-start-1",
-              "row-span-4 col-start-2 row-start-5",
-              "row-span-4 col-start-3 row-start-2",
-              "row-span-4 col-start-3 row-start-6",
+              "lg:row-span-4 lg:col-start-1 lg:row-start-2 max-lg:order-1 md:order-1",
+              "lg:row-span-4 lg:col-start-1 lg:row-start-6 max-lg:order-2 md:order-2",
+              "lg:row-span-4 lg:col-start-2 lg:row-start-1 max-lg:order-4 md:order-3",
+              "lg:row-span-4 lg:col-start-2 lg:row-start-5 max-lg:order-3 md:order-4",
+              "lg:row-span-4 lg:col-start-3 lg:row-start-2 max-lg:order-5 md:order-5",
+              "lg:row-span-4 lg:col-start-3 lg:row-start-6 max-lg:order-6 md:order-6",
             ];
 
             const activeCard = index === 1 || index === 2 || index === 5;
@@ -136,14 +136,14 @@ export default function TestimonialsSection({}: TestimonialsSectionProps) {
                   />
                   <div>
                     <h4
-                      className={`font-bold text-lg ${
+                      className={`font-bold text-sm md:text-lg ${
                         activeCard ? "text-white" : "text-blue-800"
                       }`}
                     >
                       {testimonial.name}
                     </h4>
                     <h4
-                      className={`text-base font-medium ${
+                      className={`text-sm md:text-base font-medium ${
                         activeCard ? "text-neutral-300" : "text-neutral-500"
                       }`}
                     >
@@ -152,7 +152,7 @@ export default function TestimonialsSection({}: TestimonialsSectionProps) {
                   </div>
                 </div>
                 <p
-                  className={`text-base leading-normal mt-auto ${
+                  className={`leading-normal mt-auto text-sm md:text-base ${
                     activeCard ? "text-white" : "text-black"
                   }`}
                 >

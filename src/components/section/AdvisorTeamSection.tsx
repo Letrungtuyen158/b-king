@@ -79,36 +79,38 @@ export default function AdvisorTeamSection() {
           whileInView='visible'
           viewport={{ once: true }}
           variants={stagger}
-          className='grid md:grid-cols-9 grid-cols-1 grid-rows-1 md:grid-rows-5 gap-6'
+          className='grid md:grid-cols-9 grid-cols-1 md:grid-rows-5 gap-6'
         >
           {[
             {
               image: "/images/home/tour_options/image_tour_option1.png",
               title: "2 Days Cruise",
               description: "Experience The Ancient History & Beaches",
-              gridClass: "col-span-3 row-span-3",
+              gridClass: "md:col-span-3 md:row-span-3",
               aspectClass: "aspect-square",
             },
             {
               image: "/images/home/tour_options/image_tour_option2.png",
               title: "3 Days Cruise",
               description: "Discover The Land Of Pharaohs & Pyramids",
-              gridClass: "col-span-3 row-span-3 col-start-4",
+              gridClass: "md:col-span-3 md:row-span-3 md:col-start-4",
               aspectClass: "aspect-square",
             },
             {
               image: "/images/home/tour_options/image_tour_option3.png",
               title: "Cat Ba Island",
               description: "Embark On A Journey For Your Lifetime",
-              gridClass: "col-span-6 row-span-2 col-start-1 row-start-4",
-              aspectClass: "aspect-[3/1]",
+              gridClass:
+                "md:col-span-6 md:row-span-2 md:col-start-1 md:row-start-4",
+              aspectClass: "aspect-square md:aspect-[3/1]",
             },
             {
               image: "/images/home/tour_options/image_tour_option4.png",
               title: "Halong Bay",
               description: "Indulge In The Art, Culture, And Cuisine",
-              gridClass: "col-span-3 row-span-5 col-start-7 row-start-1",
-              aspectClass: "aspect-[3/5]",
+              gridClass:
+                "md:col-span-3 md:row-span-5 md:col-start-7 md:row-start-1",
+              aspectClass: "aspect-square md:aspect-[3/5]",
               isHighlight: true,
             },
           ].map((option, index) => (

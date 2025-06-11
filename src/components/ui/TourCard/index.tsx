@@ -43,7 +43,7 @@ export const TourCard: React.FC<TourCardProps> = ({
         <div className='overflow-hidden'>
           <img
             src={image}
-            className='object-cover group-hover:scale-110 transition-all duration-300 rounded aspect-[4/3]'
+            className='object-cover group-hover:scale-110 transition-all duration-300 rounded aspect-[4/3] size-full'
             alt={title}
           />
         </div>

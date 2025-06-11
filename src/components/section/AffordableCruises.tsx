@@ -69,7 +69,7 @@ export default function AffordableCruises() {
 
   return (
     <section className='py-20' id='booking-tour'>
-      <div className='container mx-auto !p-20 bg-gradient-to-br from-slate-50 via-sky-50 to-sky-50 rounded-[20px] space-y-12'>
+      <div className='container mx-auto md:!px-20 !py-20 !px-4 bg-gradient-to-br from-slate-50 via-sky-50 to-sky-50 rounded-[20px] space-y-12'>
         <motion.div
           initial='hidden'
           whileInView='visible'

@@ -20,7 +20,7 @@ export default function AdventureSection() {
 
   return (
     <section
-      className='flex overflow-visible relative gap-10 items-center pt-24 pb-44 bg-white'
+      className='flex overflow-visible relative gap-10 items-center lg:pt-24 lg:pb-44 pt-0 pb-20 bg-white max-lg:flex-col-reverse'
       id='adventure-section'
     >
       <div className='container px-4 relative'>
@@ -34,27 +34,27 @@ export default function AdventureSection() {
           <motion.div
             variants={fadeInUp}
             transition={{ delay: 0.1 }}
-            className='grow shrink min-w-60 md:w-1/2 w-full z-10'
+            className='grow shrink min-w-60 lg:w-1/2 w-full z-10'
           >
             <div className='flex flex-col justify-center items-start w-full max-md:max-w-full'>
               <motion.p
                 variants={fadeInUp}
                 transition={{ delay: 0.2 }}
-                className='text-3xl script-font leading-none text-center text-stone-900'
+                className='text-3xl script-font leading-none lg:text-center text-stone-900'
               >
                 Vietnam Adventure Travel
               </motion.p>
               <motion.h1
                 variants={fadeInUp}
                 transition={{ delay: 0.3 }}
-                className='text-4xl font-bold leading-none text-center text-blue-800 max-md:max-w-full'
+                className='text-4xl font-bold leading-none lg:text-center text-blue-800 max-md:max-w-full'
               >
                 Discover Your Next Adventure
               </motion.h1>
               <motion.p
                 variants={fadeInUp}
                 transition={{ delay: 0.4 }}
-                className='self-stretch text-sm leading-5 text-neutral-900 max-md:max-w-full'
+                className='self-stretch text-sm leading-5 text-neutral-900 max-md:max-w-full lg:text-center'
               >
                 With over 20 years of expertise, Asia Pacific Travel has been
                 crafting memorable journeys for travelers worldwide. Our
@@ -73,14 +73,14 @@ export default function AdventureSection() {
         whileInView='visible'
         viewport={{ once: true }}
         variants={stagger}
-        className='absolute right-0 top-1/2 -translate-y-1/2'
+        className='lg:absolute lg:right-0 lg:top-1/2 lg:pl-0 pl-4 lg:-translate-y-1/2'
       >
         <motion.img
           variants={fadeInUp}
           transition={{ delay: 0.6 }}
           src='/images/home/image_adventure.png'
           alt='Vietnam adventure travel destination'
-          className='object-contain rounded-[800px_0px_0px_800px] w-[707px] max-md:max-w-full ml-auto z-20'
+          className='object-contain rounded-[800px_0px_0px_800px] lg:max-w-[45%] w-full ml-auto z-20'
         />
       </motion.div>
     </section>

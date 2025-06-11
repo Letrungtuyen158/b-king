@@ -6,7 +6,7 @@ export const DecorativeDivider: React.FC<DecorativeDividerProps> = ({}) => {
   return (
     <div className='flex gap-4 justify-center items-center mt-3 w-full'>
       <div className='flex flex-1 shrink gap-2 items-center self-stretch my-auto basis-0'>
-        <div className='flex-1 shrink self-stretch my-auto h-px border border-blue-300 border-solid basis-0 w-[113px]' />
+        <div className='flex-1 shrink self-stretch my-auto h-px border border-blue-300 border-solid basis-0 w-full' />
         <svg
           width='12'
           height='12'
@@ -47,7 +47,7 @@ export const DecorativeDivider: React.FC<DecorativeDividerProps> = ({}) => {
           />
         </svg>
 
-        <div className='flex-1 shrink self-stretch my-auto w-28 h-px border border-blue-300 border-solid basis-0' />
+        <div className='flex-1 shrink self-stretch my-auto w-full h-px border border-blue-300 border-solid basis-0' />
       </div>
     </div>
   );
