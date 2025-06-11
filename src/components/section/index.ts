@@ -8,3 +8,5 @@ export { default as CruisePackagesSection } from "./CruisePackagesSection";
 export { default as DiscoverSliderSection } from "./DiscoverSliderSection";
 export { default as TestimonialsSection } from "./TestimonialsSection";
 export { default as NewsletterSection } from "./NewsletterSection";
+export { default as AdventureSection } from "./AdventureSection";
+export { default as PartnerSection } from "./PartnerSection";

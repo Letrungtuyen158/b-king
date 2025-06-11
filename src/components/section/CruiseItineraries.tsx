@@ -105,7 +105,7 @@ export default function CruiseItineraries() {
           variants={fadeInUp}
           className='text-center mb-16'
         >
-          <h2 className='text-4xl md:text-5xl font-bold text-blue-800 mb-6'>
+          <h2 className='text-4xl font-bold text-blue-800 mb-6'>
             Cruise Itineraries
           </h2>
           {/* <p className="text-lg text-gray-600 max-w-4xl mx-auto">

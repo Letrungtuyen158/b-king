@@ -23,7 +23,7 @@ export default function ExperienceSection() {
           variants={fadeInUp}
           className='text-center mb-16'
         >
-          <h2 className='text-4xl font-bold text-blue-800 mb-6'>
+          <h2 className='text-4xl font-bold text-blue-800 mb-4'>
             Choose Your Perfect Halong Bay Experience
           </h2>
           <p className='text-sm text-gray-900'>

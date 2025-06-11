@@ -79,14 +79,14 @@ export default function CruisePackagesSection() {
                       <span className='text-xs text-neutral-500'>
                         Starting from
                       </span>
-                      <div className='text-2xl font-semibold leading-loose tracking-wide text-blue-800'>
+                      <div className='text-2xl font-semibold leading-[32px] tracking-wide text-blue-800'>
                         ${cruise.currentPrice}
                       </div>
                       <span className='text-xs text-neutral-500'>/person</span>
                     </div>
                     <div className='flex flex-col items-end gap-3'>
                       <IconHeart />
-                      <button className='bg-white text-blue-800 px-4 py-2 rounded hover:bg-blue-50 text-xs border border-blue-800 transition-colors'>
+                      <button className='bg-white text-blue-800 px-4 py-2 rounded hover:bg-blue-50 text-xs outline outline-[0.75px] outline-offset-[-0.75px] outline-blue-800 transition-colors'>
                         View Details
                       </button>
                     </div>

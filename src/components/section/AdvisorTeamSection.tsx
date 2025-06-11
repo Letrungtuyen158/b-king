@@ -23,7 +23,7 @@ export default function AdvisorTeamSection() {
           variants={fadeInUp}
           className='text-center mb-6'
         >
-          <h2 className='text-4xl md:text-5xl font-bold text-blue-800 mb-6'>
+          <h2 className='text-4xl font-bold text-blue-800 mb-6'>
             Our advisor team is ready to help you
             <br />
             plan your dream trip to Halong Bay

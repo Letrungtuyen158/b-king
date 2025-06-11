@@ -70,30 +70,31 @@ export default function TestimonialsSection({}: TestimonialsSectionProps) {
   return (
     <section
       id='activities'
-      className='py-20 bg-blue-900 text-white relative overflow-hidden'
+      className='py-20 text-white relative overflow-hidden '
     >
       <div
-        className='absolute inset-0 bg-cover bg-center opacity-20'
+        className='absolute inset-0 bg-cover bg-center'
         style={{
           backgroundImage: `url('/images/home/testimonials/image_testimonials.png')`,
         }}
       />
+      <div className='absolute inset-0 z-[1] bg-gradient-to-b from-black/40 to-neutral-600/0 backdrop-blur-[5px]' />
       <div className='container mx-auto px-4 relative z-10'>
         <motion.div
           initial='hidden'
           whileInView='visible'
           viewport={{ once: true }}
           variants={fadeInUp}
-          className='text-center mb-16'
+          className='text-center mb-12'
         >
-          <h2 className='text-4xl md:text-5xl font-bold mb-6'>
+          <h2 className='text-4xl text-white font-bold mb-4'>
             Unforgettable Travel Experiences
           </h2>
-          <p className='text-lg text-blue-100 max-w-4xl mx-auto'>
+          <p className='text-sm text-white mx-auto'>
             With over 20 years of expertise, Asia Pacific Travel has been
-            crafting memorable journeys for travelers worldwide. Our experienced
-            tour guides and dedicated advisor team ensure every detail of your
-            adventure is seamless and unforgettable.
+            crafting memorable journeys for travelers worldwide.
+            <br /> Our experienced tour guides and dedicated advisor team ensure
+            every detail of your adventure is seamless and unforgettable.
           </p>
         </motion.div>
 
@@ -102,32 +103,64 @@ export default function TestimonialsSection({}: TestimonialsSectionProps) {
           whileInView='visible'
           viewport={{ once: true }}
           variants={stagger}
-          className='grid md:grid-cols-2 lg:grid-cols-3 gap-8'
+          className='grid md:grid-cols-3 md:grid-rows-9 gap-6'
         >
-          {testimonials.map((testimonial, index) => (
-            <motion.div
-              key={index}
-              variants={fadeInUp}
-              className={`bg-white/10 backdrop-blur-sm rounded-2xl p-6 ${
-                index === 1 || index === 3 || index === 4 ? "bg-blue-600" : ""
-              }`}
-            >
-              <div className='flex items-center mb-4'>
-                <img
-                  src={testimonial.avatar}
-                  alt={testimonial.name}
-                  className='w-12 h-12 rounded-full mr-4'
-                />
-                <div>
-                  <h4 className='font-bold'>{testimonial.name}</h4>
-                  <p className='text-sm opacity-80'>{testimonial.role}</p>
+          {testimonials.map((testimonial, index) => {
+            const gridClasses = [
+              "row-span-4 col-start-1 row-start-2",
+              "row-span-4 col-start-1 row-start-6",
+              "row-span-4 col-start-2 row-start-1",
+              "row-span-4 col-start-2 row-start-5",
+              "row-span-4 col-start-3 row-start-2",
+              "row-span-4 col-start-3 row-start-6",
+            ];
+
+            const activeCard = index === 1 || index === 2 || index === 5;
+            return (
+              <motion.div
+                key={index}
+                variants={fadeInUp}
+                className={`rounded-xl p-6 outline outline-1 flex flex-col outline-offset-[-1px] ${
+                  gridClasses[index]
+                } ${
+                  activeCard
+                    ? "bg-blue-800 outline-blue-800"
+                    : "bg-white outline-blue-200"
+                }`}
+              >
+                <div className='flex items-center mb-2'>
+                  <img
+                    src={testimonial.avatar}
+                    alt={testimonial.name}
+                    className='w-12 h-12 rounded-full mr-4'
+                  />
+                  <div>
+                    <h4
+                      className={`font-bold text-lg ${
+                        activeCard ? "text-white" : "text-blue-800"
+                      }`}
+                    >
+                      {testimonial.name}
+                    </h4>
+                    <h4
+                      className={`text-base font-medium ${
+                        activeCard ? "text-neutral-300" : "text-neutral-500"
+                      }`}
+                    >
+                      {testimonial.role}
+                    </h4>
+                  </div>
                 </div>
-              </div>
-              <p className='text-sm leading-relaxed'>
-                &quot;{testimonial.content}&quot;
-              </p>
-            </motion.div>
-          ))}
+                <p
+                  className={`text-base leading-normal mt-auto ${
+                    activeCard ? "text-white" : "text-black"
+                  }`}
+                >
+                  &quot;{testimonial.content}&quot;
+                </p>
+              </motion.div>
+            );
+          })}
         </motion.div>
       </div>
     </section>

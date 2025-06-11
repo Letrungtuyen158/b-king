@@ -12,6 +12,8 @@ import {
   DiscoverSliderSection,
   TestimonialsSection,
   NewsletterSection,
+  AdventureSection,
+  PartnerSection,
 } from "@/components/section";
 
 export default function HomePage() {
@@ -45,8 +47,14 @@ export default function HomePage() {
       {/* Affordable Cruises Section */}
       <AffordableCruises />
 
+      {/* Adventure Section */}
+      <AdventureSection />
+
       {/* Travel Blog Section */}
       <TravelBlog />
+
+      {/* Partner Section */}
+      <PartnerSection />
 
       {/* Newsletter Section */}
       <NewsletterSection />
