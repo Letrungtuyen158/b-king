@@ -34,10 +34,10 @@ export default function HomeGallerySlider() {
   const nextRef = useRef(null);
 
   return (
-    <div className='w-full flex flex-col items-center'>
-      <div className='relative flex items-center justify-center'>
+    <div className="w-full flex flex-col items-center">
+      <div className="relative flex items-center justify-center">
         <Swiper
-          effect='coverflow'
+          effect="coverflow"
           slidesPerView={3}
           centeredSlides={true}
           loop={true}
@@ -51,27 +51,26 @@ export default function HomeGallerySlider() {
             slideShadows: false,
           }}
           navigation={{ prevEl: prevRef.current, nextEl: nextRef.current }}
-          onInit={(swiper) => {
-            // @ts-ignore
+          // eslint-disable-next-line @typescript-eslint/no-explicit-any
+          onInit={(swiper: any) => {
             swiper.params.navigation.prevEl = prevRef.current;
-            // @ts-ignore
             swiper.params.navigation.nextEl = nextRef.current;
             swiper.navigation.init();
             swiper.navigation.update();
           }}
           pagination={{ clickable: true, el: ".custom-swiper-pagination" }}
           modules={[EffectCoverflow, Navigation, Pagination]}
-          className='w-[1200px] h-[480px]'
+          className="w-[1200px] h-[480px]"
         >
           {images.map((img, idx) => (
             <SwiperSlide key={img.url}>
-              <div className='relative w-[400px] h-[480px] bg-gradient-to-b from-white/10 to-black/10 shadow-[20px_20px_70px_0px_rgba(0,0,0,0.60)] rounded-2xl overflow-hidden group cursor-pointer transition-transform duration-300'>
+              <div className="relative w-[400px] h-[480px] bg-gradient-to-b from-white/10 to-black/10 shadow-[20px_20px_70px_0px_rgba(0,0,0,0.60)] rounded-2xl overflow-hidden group cursor-pointer transition-transform duration-300">
                 <img
                   src={img.url}
                   alt={img.alt}
-                  className='w-full h-full object-cover group-hover:scale-105 transition-transform duration-300'
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                 />
-                <span className='absolute bottom-4 left-4 text-3xl font-bold text-white/80 drop-shadow-lg select-none'>
+                <span className="absolute bottom-4 left-4 text-3xl font-bold text-white/80 drop-shadow-lg select-none">
                   {String(idx + 1).padStart(2, "0")}
                 </span>
               </div>
@@ -80,44 +79,44 @@ export default function HomeGallerySlider() {
           {/* Prev Arrow */}
           <button
             ref={prevRef}
-            className='z-10 absolute left-0 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white text-gray-900 rounded-full shadow-lg w-10 h-10 flex items-center justify-center transition-colors'
+            className="z-10 absolute left-0 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white text-gray-900 rounded-full shadow-lg w-10 h-10 flex items-center justify-center transition-colors"
             // style={{ marginLeft: "-24px" }}
-            aria-label='Previous'
+            aria-label="Previous"
           >
             <svg
-              width='24'
-              height='24'
-              fill='none'
-              stroke='currentColor'
-              strokeWidth='2'
-              viewBox='0 0 24 24'
+              width="24"
+              height="24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              viewBox="0 0 24 24"
             >
-              <path d='M15 19l-7-7 7-7' />
+              <path d="M15 19l-7-7 7-7" />
             </svg>
           </button>
           {/* Next Arrow */}
           <button
             ref={nextRef}
-            className='z-10 absolute right-0 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white text-gray-900 rounded-full shadow-lg w-10 h-10 flex items-center justify-center transition-colors'
+            className="z-10 absolute right-0 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white text-gray-900 rounded-full shadow-lg w-10 h-10 flex items-center justify-center transition-colors"
             // style={{ marginRight: "-24px" }}
-            aria-label='Next'
+            aria-label="Next"
           >
             <svg
-              width='24'
-              height='24'
-              fill='none'
-              stroke='currentColor'
-              strokeWidth='2'
-              viewBox='0 0 24 24'
+              width="24"
+              height="24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              viewBox="0 0 24 24"
             >
-              <path d='M9 5l7 7-7 7' />
+              <path d="M9 5l7 7-7 7" />
             </svg>
           </button>
         </Swiper>
       </div>
       {/* Dots */}
       <div
-        className='custom-swiper-pagination flex gap-4 justify-center mt-4'
+        className="custom-swiper-pagination flex gap-4 justify-center mt-4"
         style={{ marginTop: "16px" }}
       />
       <style jsx global>{`
@@ -138,3 +137,4 @@ export default function HomeGallerySlider() {
     </div>
   );
 }
+
